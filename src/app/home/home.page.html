@@ -1,20 +1,21 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-title>
-      Blank
+      To Do App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <h1>Click plus button below to add new task</h1>
+  <p>{{this.test}}</p>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-list id="toDoList"> </ion-list>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-icon name="add-circle" (click)="this.addTask()"></ion-icon>
+  </ion-toolbar>
+</ion-footer>
