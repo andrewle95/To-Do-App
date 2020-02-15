@@ -10,7 +10,22 @@
   <h1>Click plus button below to add new task</h1>
   <p>{{this.test}}</p>
   <div id="container">
-    <ion-list id="toDoList"> </ion-list>
+    <ion-list id="toDoList"> 
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option (click)="favorite(item)">Favorite</ion-item-option>
+          <ion-item-option color="danger" (click)="share(item)">Share</ion-item-option>
+        </ion-item-options>
+    
+        <ion-item>
+          <ion-label>Wake Up at 8:00 AM</ion-label>
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option (click)="itemComplete(item)">Complete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
   </div>
 </ion-content>
 
